@@ -1,0 +1,272 @@
+<div class="signup-container">
+  <!-- Étape 1 : Informations personnelles -->
+  <div *ngIf="step === 1">
+    <h2>Informations personnelles</h2>
+    <form [formGroup]="formStep1" (ngSubmit)="goToStep2()">
+      <!-- Champ : Nom -->
+      <label for="nom">Nom :</label>
+      <input
+        type="text"
+        id="nom"
+        formControlName="nom"
+        placeholder="Entrez votre nom"
+        required
+        oninput="this.value = this.value.charAt(0).toUpperCase() + this.value.slice(1)"
+      />
+      <div
+        *ngIf="formStep1.get('nom')?.invalid && formStep1.get('nom')?.touched"
+        class="error-message"
+      >
+        Le nom est requis.
+      </div>
+
+      <!-- Champ : Prénom -->
+      <label for="prenom">Prénom :</label>
+      <input
+        type="text"
+        id="prenom"
+        formControlName="prenom"
+        placeholder="Entrez votre prénom"
+        required
+        oninput="this.value = this.value.charAt(0).toUpperCase() + this.value.slice(1)"
+      />
+      <div
+        *ngIf="
+          formStep1.get('prenom')?.invalid && formStep1.get('prenom')?.touched
+        "
+        class="error-message"
+      >
+        Le prénom est requis.
+      </div>
+
+      <!-- Champ : Date de naissance -->
+      <label for="dateNaissance">Date de naissance :</label>
+      <input
+        type="date"
+        id="dateNaissance"
+        formControlName="dateNaissance"
+        required
+      />
+      <div
+        *ngIf="
+          formStep1.get('dateNaissance')?.invalid &&
+          formStep1.get('dateNaissance')?.touched
+        "
+        class="error-message"
+      >
+        La date de naissance est requise.
+      </div>
+
+      <!-- Champ : Sexe -->
+      <label>Sexe :</label>
+      <select id="sexe" formControlName="sexe" required>
+        <option value="">--Sélectionnez--</option>
+        <option value="Homme">Homme</option>
+        <option value="Femme">Femme</option>
+        <option value="Autre">Autre</option>
+      </select>
+      <div
+        *ngIf="formStep1.get('sexe')?.invalid && formStep1.get('sexe')?.touched"
+        class="error-message"
+      >
+        Le sexe est requis.
+      </div>
+
+      <!-- Champ : Adresse -->
+      <label for="adresse">Adresse :</label>
+      <input
+        type="text"
+        id="adresse"
+        formControlName="adresse"
+        placeholder="Entrez votre adresse"
+        required
+        oninput="this.value = this.value.charAt(0).toUpperCase() + this.value.slice(1)"
+      />
+      <div
+        *ngIf="
+          formStep1.get('adresse')?.invalid && formStep1.get('adresse')?.touched
+        "
+        class="error-message"
+      >
+        L'adresse est requise.
+      </div>
+
+      <!-- Champ : Ville -->
+      <label for="ville">Ville :</label>
+      <input
+        type="text"
+        id="ville"
+        formControlName="ville"
+        placeholder="Entrez votre ville"
+        required
+        oninput="this.value = this.value.charAt(0).toUpperCase() + this.value.slice(1)"
+      />
+      <div
+        *ngIf="
+          formStep1.get('ville')?.invalid && formStep1.get('ville')?.touched
+        "
+        class="error-message"
+      >
+        La ville est requise.
+      </div>
+
+      <!-- Champ : Téléphone -->
+      <label for="telephone">Téléphone :</label>
+      <input
+        type="tel"
+        id="telephone"
+        formControlName="telephone"
+        minlength="10"
+        placeholder="Entrez votre numéro de téléphone"
+        required
+      />
+      <div
+        *ngIf="
+          formStep1.get('telephone')?.invalid &&
+          formStep1.get('telephone')?.touched
+        "
+        class="error-message"
+      >
+        Le téléphone est requis.
+      </div>
+
+      <!-- Bouton suivant -->
+      <button type="submit" [disabled]="formStep1.invalid">Suivant</button>
+      <!-- Bouton Annuler -->
+      <button type="button" (click)="resetStep1()" class="annuler">
+        Annuler
+      </button>
+    </form>
+  </div>
+
+  <!-- Étape 2 : Création du compte -->
+  <div *ngIf="step === 2">
+    <h2>Étape 2 : Création du compte</h2>
+    <form [formGroup]="formStep2" (ngSubmit)="goToStep3()">
+      <!-- Champ : Email -->
+      <label for="email">Email :</label>
+      <input type="email" id="email" formControlName="email" required />
+      <div
+        *ngIf="
+          formStep2.get('email')?.invalid && formStep2.get('email')?.touched
+        "
+        class="error-message"
+      >
+        Un email valide est requis.
+      </div>
+
+      <!-- Champ : Mot de passe -->
+      <label for="password">Mot de passe :</label>
+      <div>
+        <input
+          [type]="passwordVisible ? 'text' : 'password'"
+          id="password"
+          formControlName="password"
+          required
+          (input)="onPasswordInput()"
+        />
+        <div
+          class="password-requirements"
+          [ngClass]="{ invalid: !isPasswordValid(), valid: isPasswordValid() }"
+        >
+          <ul>
+            <li [class.invalid]="!isUppercase">1 Lettre majuscule</li>
+            <li [class.invalid]="!isNumber">4 Chiffres</li>
+            <li [class.invalid]="!isSpecialChar">1 Symbole spécial</li>
+            <li [class.invalid]="!isLengthValid">8 Caractères minimum</li>
+          </ul>
+        </div>
+        <button type="button" (click)="togglePasswordVisibility()">
+          {{ passwordVisible ? "Masquer" : "Afficher" }}
+        </button>
+      </div>
+
+      <!-- Champ : Confirmer le mot de passe -->
+      <label for="confirmPassword">Confirmer le mot de passe :</label>
+      <input
+        [type]="passwordVisible ? 'text' : 'password'"
+        id="confirmPassword"
+        formControlName="confirmPassword"
+        required
+      />
+      <div
+        *ngIf="
+          formStep2.get('confirmPassword')?.invalid &&
+          formStep2.get('confirmPassword')?.touched
+        "
+        class="error-message"
+      >
+        La confirmation est requise.
+      </div>
+      <div
+        *ngIf="
+          formStep2.get('password')?.value !==
+          formStep2.get('confirmPassword')?.value
+        "
+        class="error-message"
+      >
+        Les mots de passe doivent correspondre.
+      </div>
+
+      <button type="submit" [disabled]="formStep2.invalid">Suivant</button>
+      <button type="button" (click)="resetStep2()" class="annuler">
+        Precedent
+      </button>
+    </form>
+  </div>
+
+  <div *ngIf="step === 3">
+    <form [formGroup]="formStep3">
+      <label for="username">Nom d'utilisateur</label>
+      <input
+        id="username"
+        formControlName="username"
+        placeholder="Entrez un nom d'utilisateur"
+      />
+      <ul>
+        <li [class.invalid]="!isUppercase">Maximum 20 caractères</li>
+        <li [class.invalid]="!isNumber">Minimum 4 caractères.</li>
+      </ul>
+      <div
+        *ngIf="
+          formStep3.get('username')?.touched &&
+          formStep3.get('username')?.invalid
+        "
+      >
+        <small
+          *ngIf="formStep3.get('username')?.hasError('required')"
+          class="text-danger"
+          >Nom d'utilisateur requis.</small
+        >
+        <small
+          *ngIf="formStep3.get('username')?.hasError('minlength')"
+          class="text-danger"
+          >Minimum 4 caractères.</small
+        >
+        <small
+          *ngIf="formStep3.get('username')?.hasError('maxlength')"
+          class="text-danger"
+          >Maximum 20 caractères.</small
+        >
+      </div>
+      <div
+        *ngIf="
+          formStep3.get('username')?.invalid &&
+          formStep3.get('username')?.touched
+        "
+        class="error-message"
+      >
+        Un username valide est requis.
+      </div>
+      <button (click)="onSubmit()" [disabled]="!formStep3.valid">
+        Soumettre
+      </button>
+      <button (click)="goToStep2()">Précédent</button>
+    </form>
+  </div>
+</div>
+
+<!-- Message d'erreur global -->
+<div class="alert alert-danger" *ngIf="errorMessage">
+  {{ errorMessage }}
+</div>

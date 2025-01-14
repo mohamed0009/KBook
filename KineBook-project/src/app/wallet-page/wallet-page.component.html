@@ -1,0 +1,25 @@
+<app-sidebar-admin></app-sidebar-admin>
+<div class="wallet-page">
+    <h2>Historique des Commissions</h2>
+
+    <table class="commissions-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Date</th>
+          <th>Montant (DH)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let commission of commissions; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ commission.date | date: 'dd/MM/yyyy' }}</td>
+          <td>{{ commission.montant }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="total-mois">
+      <strong>Total du mois en cours : </strong> {{ totalMoisEnCours }} DH
+    </div>
+  </div>

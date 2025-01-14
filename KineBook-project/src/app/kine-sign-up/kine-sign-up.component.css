@@ -1,0 +1,92 @@
+/* Style du conteneur principal */
+.form-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+/* Titre */
+h2 {
+  background-color: #2ca8a5;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px 5px 0 0;
+  margin: -20px -20px 20px;
+  text-align: center;
+}
+
+/* Labels */
+label {
+  display: block;
+  font-weight: bold;
+  margin: 10px 0 5px;
+  color: #333;
+}
+
+/* Champs de texte */
+input[type="text"], 
+input[type="email"], 
+input[type="tel"], 
+input[type="password"],
+input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* Boutons */
+button {
+  background-color: #2ca8a5;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Bouton annuler */
+.cancel-button {
+  background-color: #dc3545;
+}
+
+.cancel-button:hover {
+  background-color: #c82333;
+}
+
+/* Messages d'erreur */
+.error-message {
+  color: #d9534f;
+  font-size: 12px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+
+   /* Style pour les champs invalides */
+   input.ng-invalid.ng-touched {
+    border-color: red;
+  }
+  /* Style des messages d'erreur */
+div.error-message {
+  color: red;  /* Texte en rouge */
+  font-size: 15px;
+  margin-top: 4px;
+}

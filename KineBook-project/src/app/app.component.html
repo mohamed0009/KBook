@@ -1,0 +1,9 @@
+<div class="flex flex-col min-h-screen">
+  <app-navbar></app-navbar>
+  <main class="content-wrapper">
+    <router-outlet></router-outlet>
+  </main>
+  <app-footer></app-footer>
+</div>
+
+<app-loading *ngIf="isLoading$ | async"></app-loading>

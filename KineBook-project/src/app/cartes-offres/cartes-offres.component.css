@@ -1,0 +1,22 @@
+.card{
+  border: 2px solid #2bb0b0;
+   border-radius: 8px;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+#scrollableContainer {
+  height: 1000px; /* Hauteur fixe pour le conteneur */
+  overflow-y: auto; /* Activer le scroll vertical */
+  border: 1px solid #2bb0b0; /* Bordure pour visualiser le conteneur */
+
+}
+.container{
+  margin-top: 5%;
+}
+a {
+  text-decoration: none;
+}
+.bg-blue-500
+{
+  background-color: #2bb0b0;
+}
+

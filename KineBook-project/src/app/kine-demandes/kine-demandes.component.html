@@ -1,0 +1,33 @@
+<app-sidebar-admin></app-sidebar-admin>
+<div class="gestion-kine-page">
+    <h2>Gestion des Demandes des Kinés</h2>
+  
+    <table class="demandes-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Nom</th>
+          <th>Spécialité</th>
+          <th>Statut</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let demande of demandes; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ demande.nom }}</td>
+          <td>{{ demande.specialite }}</td>
+          <td>{{ demande.statut }}</td>
+          <td>
+            <button (click)="accepterDemande(demande.id)" [disabled]="demande.statut !== 'En attente'">
+              Accepter
+            </button>
+            <button (click)="refuserDemande(demande.id)" [disabled]="demande.statut !== 'En attente'">
+              Refuser
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

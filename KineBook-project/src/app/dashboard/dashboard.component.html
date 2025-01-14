@@ -1,0 +1,18 @@
+<!-- Alerte de connexion -->
+<div
+  class="alert position-fixed top-0 start-50 translate-middle-x mt-4"
+  [ngClass]="alertClass"
+  role="alert"
+  *ngIf="showAlert"
+  style="z-index: 9999"
+>
+  {{ alertMessage }}
+  <button type="button" class="btn-close" (click)="showAlert = false"></button>
+</div>
+
+<!-- Contenu principal avec la couleur de fond cohérente -->
+<div class="main-content">
+  <div class="dashboard-container">
+    <app-cartes-offres class="full-width-height"></app-cartes-offres>
+  </div>
+</div>

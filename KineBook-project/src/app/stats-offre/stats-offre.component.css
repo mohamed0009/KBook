@@ -1,0 +1,42 @@
+.kine-page {
+    padding: 20px;
+    background-color: #f4f4f4;
+  }
+  
+  h2 {
+    color: #2bb0b0;
+    margin-bottom: 20px;
+    margin-left: 20%;
+  }
+  
+  .offers-table {
+    width: 80%;
+    margin-left: 20%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+  
+  .offers-table th,
+  .offers-table td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .offers-table th {
+    background-color: #2bb0b0;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  .offers-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .offers-table tr:last-child td {
+    border-bottom: none;
+  }
+  

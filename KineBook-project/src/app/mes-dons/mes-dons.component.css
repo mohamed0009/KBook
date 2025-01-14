@@ -1,0 +1,53 @@
+.sidebar {
+    background-color: #2bb0b0 !important; /* Nouvelle couleur */
+    height: 100vh; /* Hauteur pleine */
+    padding: 15px; /* Espacement interne */
+  }
+  
+  .sidebar .nav-link {
+    color: #ffffff; /* Texte des liens en blanc */
+  }
+  
+  .sidebar .nav-link:hover {
+    color: #f8f9fa; /* Texte légèrement plus clair au survol */
+  }
+  
+  .sidebar i {
+    margin-right: 8px; /* Espacement entre l'icône et le texte */
+  }
+  
+  #div2 {
+    border-radius: 25px;
+    border: 2px solid #62c5cc;
+    padding: 20px;
+    width: 1300px;
+    height: 550px;
+    margin-left: 50px;
+    margin-top: 10px;
+    background-color: white;
+    }
+  
+  .myDiv {
+    width: 100%;
+    height: 400px;
+    overflow-y: scroll; /* Pour le défilement vertical */
+    overflow-x: auto; /* Pour le défilement horizontal */
+    position: relative;
+  }
+  
+  .table thead {
+    position: sticky;
+    top: 0;
+    z-index: 2; /* S'assurer que l'en-tête est au-dessus des autres éléments */
+  }
+  /* Espacer les icônes horizontalement */
+  td .btn-group .btn {
+    margin-right: 5px; /* Ajustez cette valeur pour plus ou moins d'espace entre les icônes */
+  }
+  
+  /* Pour le dernier bouton, enlever la marge droite */
+  td .btn-group .btn:last-child {
+    margin-right: 0;
+  }
+  
+  

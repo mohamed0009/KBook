@@ -1,0 +1,53 @@
+.sidebar {
+    width: 250px;
+    background-color: #2bb0b0;  /* Couleur de fond #2bb0b0 */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    height: 100vh;  /* Prendre toute la hauteur de l'écran */
+    position: fixed;  /* Fixe la sidebar à gauche de la page */
+  }
+  
+  /* Section de profil admin */
+  .admin-profile {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .profile-pic {
+    margin-left: 30%;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid white;
+    object-fit: cover;
+  }
+  
+  .admin-name {
+    margin: 10px 0 0;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .sidebar button {
+    background: none;
+    border: none;
+    color: white;
+    padding: 15px 20px;
+    text-align: left;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;  /* Animation lors du survol */
+  }
+  
+  .sidebar button:hover,
+  .sidebar button.active {
+    background-color: #1d8e8e;  /* Couleur plus foncée lors du survol */
+  }
+  
+  .sidebar button:focus {
+    outline: none;
+  }
+  

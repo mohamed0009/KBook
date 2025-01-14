@@ -1,0 +1,163 @@
+<div class="container-fluid">
+    <!-- Barre de navigation latérale -->
+    <div class="row">
+      <nav class="col-md-2 d-none d-md-block sidebar bg-dark">
+        <div class="position-sticky">
+          <ul class="nav flex-column text-white">
+            <li class="nav-item py-2">
+              <a class="nav-link text-white" href="/mes-dons">
+                <i class="fa-solid fa-house"></i> Mes dons
+              </a>
+            </li>
+            <li class="nav-item py-2">
+              <a class="nav-link text-white" href="/ajout-don">
+                <i class="fa-solid fa-list"></i> Ajouter un don
+              </a>
+            </li>
+            
+            <li class="nav-item py-2">
+              <a class="nav-link text-white" href="#">
+                <i class="fa fa-power-off"></i>
+                Déconnexion
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+  
+      <!-- Section principale pour les offres -->
+      <main class="col-md-10 ms-sm-auto col-lg-10 px-md-4">
+    
+          
+            <div class="container">
+                <h2>Ajouter un Don</h2>
+                <form (ngSubmit)="onSubmit()" #donationForm="ngForm">
+                  <!-- Nom du matériel -->
+                  <div class="form-group">
+                    <label for="material-name">Nom du matériel</label>
+                    <input
+                      type="text"
+                      id="material-name"
+                      name="materialName"
+                      [(ngModel)]="don.materialName"
+                      required
+                      class="form-control"
+                      placeholder="Ex: Table de massage"
+                    />
+                  </div>
+              
+                  <!-- Catégorie -->
+                  <div class="form-group">
+                    <label for="category">Catégorie</label>
+                    <select
+                      id="category"
+                      name="category"
+                      [(ngModel)]="don.category"
+                      required
+                      class="form-control"
+                    >
+                      <option value="" disabled selected>-- Sélectionnez une catégorie --</option>
+                      <option value="equipment">Équipement de rééducation</option>
+                      <option value="furniture">Mobilier médical</option>
+                      <option value="accessories">Accessoires</option>
+                      <option value="other">Autre</option>
+                    </select>
+                  </div>
+              
+                  <!-- Description -->
+                  <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea
+                      id="description"
+                      name="description"
+                      [(ngModel)]="don.description"
+                      class="form-control"
+                      placeholder="Ajoutez une description..."
+                    ></textarea>
+                  </div>
+              
+                  <!-- Quantité -->
+                  <div class="form-group">
+                    <label for="quantity">Quantité</label>
+                    <input
+                      type="number"
+                      id="quantity"
+                      name="quantity"
+                      [(ngModel)]="don.quantity"
+                      required
+                      class="form-control"
+                      min="1"
+                      placeholder="Ex: 5"
+                    />
+                  </div>
+              
+                  <!-- État -->
+                  <div class="form-group">
+                    <label for="condition">État du matériel</label>
+                    <select
+                      id="condition"
+                      name="condition"
+                      [(ngModel)]="don.condition"
+                      required
+                      class="form-control"
+                    >
+                      <option value="" disabled selected>-- Sélectionnez un état --</option>
+                      <option value="new">Neuf</option>
+                      <option value="good">Bon état</option>
+                      <option value="repairable">Réparable</option>
+                    </select>
+                  </div>
+              
+                  <!-- Date de disponibilité -->
+                  <div class="form-group">
+                    <label for="availability-date">Date de disponibilité</label>
+                    <input
+                      type="date"
+                      id="availability-date"
+                      name="availabilityDate"
+                      [(ngModel)]="don.availabilityDate"
+                      required
+                      class="form-control"
+                    />
+                  </div>
+              
+                  <!-- Lieu de récupération -->
+                  <div class="form-group">
+                    <label for="location">Lieu de récupération</label>
+                    <input
+                      type="text"
+                      id="location"
+                      name="location"
+                      [(ngModel)]="don.location"
+                      required
+                      class="form-control"
+                      placeholder="Ex: Casablanca, Maroc"
+                    />
+                  </div>
+              
+                  <!-- Photo -->
+                  <div class="form-group">
+                    <label for="photo">Photo du matériel</label>
+                    <input
+                      type="file"
+                      id="photo"
+                      name="photo"
+                      (change)="onFileSelected($event)"
+                      class="form-control"
+                    />
+                  </div>
+              
+                  <!-- Bouton de soumission -->
+                  <button type="submit" class="btn btn-primary" [disabled]="!donationForm.valid">
+                    Ajouter le Don
+                  </button>
+                </form>
+              </div>
+              
+          
+      
+
+  
+  
+  
+  

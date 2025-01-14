@@ -1,0 +1,76 @@
+.bg-blue-500 {
+  background-color: #2bb0b0;
+}
+
+a {
+  text-decoration: none;
+}
+.question {
+  font-size: 20px;
+  color: #2bb0b0;
+  text-decoration: underline;
+}
+
+.response {
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.question:hover {
+  text-decoration: underline;
+}
+
+h3 {
+  color: #fffafa;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 35px;
+}
+.container {
+  min-height: calc(100vh - 64px - 300px);
+}
+
+.shadow-md {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.hover\:bg-\[\#239090\]:hover {
+  background-color: #239090;
+}
+
+.transition-colors {
+  transition: background-color 0.2s ease-in-out;
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.inline-flex {
+  display: inline-flex;
+  align-items: center;
+}
+
+.hover\:bg-\[\#2bb0b0\]:hover {
+  background-color: #2bb0b0;
+}
+
+.hover\:text-white:hover {
+  color: white;
+}
+
+.transition-colors {
+  transition: all 0.2s ease-in-out;
+}
+
+button:focus,
+a:focus {
+  outline: none;
+  ring: 2px;
+  ring-offset: 2px;
+  ring-color: #2bb0b0;
+}

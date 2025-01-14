@@ -1,0 +1,12 @@
+.inline-image {
+  display: inline-block;
+  margin: 0 280px;
+  vertical-align: middle;
+  margin-top: 2%;
+}
+.container{
+  margin-top: 2%;
+}
+.card{
+  border: 1px solid #2bb0b0
+}

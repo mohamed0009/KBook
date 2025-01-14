@@ -1,0 +1,62 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+/* styles.css */
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2bb0b0;
+  border-radius: 10px;
+  border: 3px solid #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #239090;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2bb0b0 #f1f1f1;
+}
+
+.min-h-screen {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-grow {
+  flex: 1;
+  padding-bottom: 3rem;
+}
+
+main {
+  min-height: calc(100vh - 64px - 300px);
+  padding: 2rem 0;
+  margin-bottom: 3rem;
+}
+
+.content-wrapper {
+  flex: 1;
+  padding: 2rem 0;
+  margin-bottom: 3rem;
+}

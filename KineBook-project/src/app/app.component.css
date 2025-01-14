@@ -1,0 +1,29 @@
+.content-padding {
+  padding: 2rem 0;
+  min-height: calc(
+    100vh - 64px - 300px
+  ); /* Ajuste la hauteur minimale en fonction de la navbar et du footer */
+}
+
+/* Pour s'assurer que le contenu ne touche pas les bords */
+.flex-grow {
+  padding: 0 1rem;
+}
+
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+router-outlet + * {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}

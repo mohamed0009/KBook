@@ -1,0 +1,70 @@
+html, body {
+  height: 100%;
+  overflow: auto;  /* Permet de faire défiler la page si nécessaire */
+}
+
+.form-container {
+  width: 80%;  /* Définit la largeur à 80% de l'écran */
+  max-height: 100vh;  /* Limite la hauteur maximale du conteneur à la hauteur de la fenêtre */
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;  /* Pour permettre un meilleur alignement sur les petits écrans */
+  overflow-y: auto;  /* Permet le défilement vertical */
+  justify-content: center;  /* Centrer le formulaire */
+}
+
+.offer-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.offer-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.offer-description {
+  text-align: center;
+}
+
+.reservation-form {
+  display: flex;
+  flex-direction: column;
+  flex: 3;
+  width: 100%;
+}
+
+.mat-form-field {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+  margin-bottom: 20px; /* Assurez-vous que l'espace en bas est suffisant pour le bouton */
+}
+
+button[mat-raised-button] {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;  /* Bleu */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[mat-raised-button]:disabled {
+  background-color: #ccc;  /* Bouton désactivé en gris */
+}

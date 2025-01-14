@@ -1,0 +1,41 @@
+<div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="profile">
+        
+        <img [src]=" user.photoUrl " alt="Photo de profil" class="profile-photo">
+        <span class="username">{{ user.username }}</span>
+      </div>
+      <ul class="sidebar-menu">
+        <li><a href="#"><i class="fa fa-home"></i> Accueil</a></li>
+        <li><a href="#"><i class="fa fa-envelope"></i> Contact</a></li>
+        <li><a href="#"><i class="fa fa-question-circle"></i> FAQ</a></li>
+        <li><a href="#"><i class="fa fa-info-circle"></i> About Us</a></li>
+        <li><a href="#"><i class="fa fa-sign-out"></i> Déconnexion</a></li>
+      </ul>
+    </div>
+  
+    <!-- Table Section -->
+    <div class="reservation-table">
+      <h2 class="reservations-title">Mes Réservations</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Numéro d'offre</th>
+            <th>Nom du Kiné</th>
+            <th>Contact</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let reservation of reservations; let i = index">
+            <td>{{ i + 1 }}</td>
+            <td>{{ reservation.kineName }}</td>
+            <td>{{ reservation.kineContact }}</td>
+            <td>{{ reservation.status }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  

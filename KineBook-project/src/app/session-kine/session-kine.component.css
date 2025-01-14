@@ -1,0 +1,25 @@
+.sidebar {
+  background-color: #2bb0b0 !important; /* Nouvelle couleur */
+  height: 100vh; /* Hauteur pleine */
+  padding: 15px; /* Espacement interne */
+}
+
+.sidebar .nav-link {
+  color: #ffffff; /* Texte des liens en blanc */
+}
+
+.sidebar .nav-link:hover {
+  color: #f8f9fa; /* Texte légèrement plus clair au survol */
+}
+
+.sidebar i {
+  margin-right: 8px; /* Espacement entre l'icône et le texte */
+}
+/* Grille des offres */
+.offer-card {
+  box-shadow: 0 2px 5px rgba(211, 18, 18, 0.1);
+}
+
+.profile img {
+  border: 2px solid #ccc;
+}

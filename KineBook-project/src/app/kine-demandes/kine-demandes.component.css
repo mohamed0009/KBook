@@ -1,0 +1,65 @@
+.gestion-kine-page {
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  h2 {
+    margin-left: 20%;
+    color: #2bb0b0;
+    margin-bottom: 20px;
+  }
+  
+  .demandes-table {
+    margin-left: 20%;
+    width: 80%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+  
+  .demandes-table th,
+  .demandes-table td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .demandes-table th {
+    background-color: #2bb0b0;
+    color: white;
+    text-transform: uppercase;
+  }
+  
+  .demandes-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 5px;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  button:disabled {
+    cursor: not-allowed;
+    background-color: #ccc;
+  }
+  
+  button:first-child {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  button:last-child {
+    background-color: #dc3545;
+    color: white;
+  }
+  

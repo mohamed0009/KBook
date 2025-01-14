@@ -1,0 +1,45 @@
+.wallet-page {
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  h2 {
+    margin-left: 20%;
+    color: #2bb0b0;
+    margin-bottom: 20px;
+  }
+  
+  .commissions-table {
+    margin-left: 20%;
+    width: 80%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+  
+  .commissions-table th,
+  .commissions-table td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .commissions-table th {
+    background-color: #2bb0b0;
+    color: white;
+    text-transform: uppercase;
+  }
+  
+  .commissions-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .total-mois {
+    margin-left: 20%;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  

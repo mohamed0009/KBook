@@ -1,0 +1,172 @@
+.sidebar {
+    background-color: #2bb0b0 !important; /* Nouvelle couleur */
+    height: 100vh; /* Hauteur pleine */
+    padding: 15px; /* Espacement interne */
+  }
+  
+  .sidebar .nav-link {
+    color: #ffffff; /* Texte des liens en blanc */
+  }
+  
+  .sidebar .nav-link:hover {
+    color: #f8f9fa; /* Texte légèrement plus clair au survol */
+  }
+  
+  .sidebar i {
+    margin-right: 8px; /* Espacement entre l'icône et le texte */
+  }
+  
+  #div2 {
+    border-radius: 25px;
+    border: 2px solid #62c5cc;
+    padding: 20px;
+    width: 1300px;
+    height: 550px;
+    margin-left: 50px;
+    margin-top: 10px;
+    background-color: white;
+    }
+  
+  .myDiv {
+    width: 100%;
+    height: 400px;
+    overflow-y: scroll; /* Pour le défilement vertical */
+    overflow-x: auto; /* Pour le défilement horizontal */
+    position: relative;
+  }
+  
+
+  .add-donation-container {
+    width: 90%;
+    height:100vh;
+    margin: auto;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .btn {
+    background-color: #2bb0b0;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  .btn:hover {
+    background-color: #1d7070;
+  }
+  
+
+
+
+  /* Conteneur principal */
+.container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* En-têtes */
+h2 {
+  background-color: #2bb0b0;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 5px 5px 0 0;
+  margin: -20px -20px 20px;
+  text-align: center;
+}
+
+/* Labels et inputs */
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #555;
+}
+
+input, select {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+input:focus, select:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Boutons */
+button {
+  padding: 0.8rem 1.5rem;
+  margin-right: 0.5rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button.annuler {
+  background-color: #dc3545;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button.annuler:hover {
+  background-color: #c82333;
+}
+
+/* Messages d'erreur */
+.error-message {
+  color: #dc3545;
+  font-size: 0.9rem;
+  margin-top: -0.8rem;
+  margin-bottom: 1rem;
+}
+
+/* Exigences mot de passe */
+.password-requirements ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.password-requirements li {
+  color: #999;
+}
+
+.password-requirements li.invalid {
+  color: #dc3545;
+}
+
+.password-requirements li.valid {
+  color: #28a745;
+}

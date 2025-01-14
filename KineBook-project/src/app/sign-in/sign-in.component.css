@@ -1,0 +1,98 @@
+.sign-in-container {
+  display: flex;
+  height: 70vh;
+  width: 70%;
+  border-radius: 15x;
+  margin: auto;
+  margin-top: 40px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+  padding: 2rem 0;
+  margin-bottom: 3rem;
+  min-height: calc(100vh - 64px - 300px);
+}
+
+.design-section {
+  flex: 1;
+  background: linear-gradient(135deg, #2bb0b0, #1d7070),
+    url("/assets/leaves.png");
+  background-size: cover; /* Scale the pattern */
+  background-blend-mode: overlay; /* Blend pattern with gradient */
+  color: rgb(39, 31, 31);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  overflow: hidden; /* Hide overflowing shapes */
+}
+.graphic-shape {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 100px;
+  height: 100px;
+  z-index: 0; /* Place behind content */
+}
+h1 {
+  text-shadow: 0 0 10px rgba(95, 95, 55, 0.7);
+}
+
+.design-section {
+  box-shadow: outset 0 0 50px rgba(0, 0, 0, 0.3);
+}
+
+.form-section {
+  flex: 1;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+h1,
+h2 {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #2bb0b0;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+.remember {
+  margin-right: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px; /* Adjust spacing between checkbox and text */
+  white-space: nowrap;
+}
+
+input[type="checkbox"] {
+  margin: 0; /* Remove any default margins */
+  vertical-align: middle; /* Align checkbox with text */
+}

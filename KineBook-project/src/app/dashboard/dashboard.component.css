@@ -1,0 +1,86 @@
+#scrollableContainer {
+  height: 1000px;
+  overflow-y: auto;
+  border: 1px solid #2bb0b0;
+}
+
+.container {
+  margin-top: 5%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.bg-blue-500 {
+  background-color: #2bb0b0;
+}
+
+.card {
+  border: 2px solid #2bb0b0;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.alert {
+  z-index: 9999;
+  min-width: 300px;
+  padding: 15px;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.alert-success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.alert-danger {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+.loading-spinner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+body {
+  background-color: #edf8f8;
+}
+
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 64px);
+  background-color: #edf8f8;
+  width: 100%;
+  padding: 2rem;
+}
+
+.full-width-height {
+  display: block;
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  background-color: #edf8f8;
+}
+
+:host {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  background-color: #edf8f8;
+}
+
+.main-content {
+  background-color: #edf8f8;
+  min-height: 100%;
+  width: 100%;
+}
